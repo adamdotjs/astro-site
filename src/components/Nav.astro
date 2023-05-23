@@ -1,0 +1,25 @@
+<nav>
+	<ul class="group relative flex items-center justify-center text-center font-medium">
+		<li><a href="/about" class="nav-link hover:text1 px-4 py-3">about</a></li>
+		<li><a href="/projects" class="nav-link hover:text1 px-4 py-3">projects</a></li>
+		<li><a href="/blog" class="nav-link hover:text1 px-4 py-3">blog</a></li>
+		<li><a href="/contact" class="nav-link hover:text1 px-4 py-3">contact</a></li>
+		<div
+			id="nav-slider"
+			class="absolute bottom-0 left-0 top-0 -z-10 w-0 origin-right bg-base02 transition-all duration-500 [--width:0px] group-hover:w-[--width]"
+		>
+		</div>
+	</ul>
+</nav>
+
+<script>
+	document.querySelector("nav").addEventListener("mouseover", (e) => {
+		if (e.target.classList.contains("nav-link")) {
+			const slider = document.querySelector("#nav-slider");
+			const navItemSize = e.target.getBoundingClientRect();
+
+			slider.style.left = e.target.offsetLeft + "px";
+			slider.style.setProperty("--width", navItemSize.width + "px");
+		}
+	});
+</script>

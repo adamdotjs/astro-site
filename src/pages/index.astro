@@ -1,15 +1,23 @@
 ---
+import Nav from "../components/Nav.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Adam Shea">
+	<div class="flex h-full flex-col items-center justify-center gap-16">
+		<h1
+			class="grid h-60 w-60 grid-cols-3 grid-rows-3 place-items-center border-4 border-magenta p-4 font-mono text-4xl font-bold uppercase dark:font-medium"
+		>
+			<span class="text-blue">a</span>
+			<span class="text-blue">d</span>
+			<span class="text-blue">a</span>
+			<span class="text-blue">m</span>
+			<span class="text-orange">s</span>
+			<span class="text-orange">h</span>
+			<span class="text-orange">e</span>
+			<span class="text-orange">a</span>
+			<span class="text-green">&#9660;</span>
+		</h1>
+		<Nav />
+	</div>
+</BaseLayout>
